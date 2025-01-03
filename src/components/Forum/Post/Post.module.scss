@@ -1,0 +1,69 @@
+.post{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.postHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userInfo{
+  display: flex;
+  align-items: center;
+}
+
+.profilePic{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.username{
+  margin-left: 1rem;
+}
+
+.postContent{
+  margin: 0.5rem 0;
+}
+
+.postMeta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggleReplies{
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.likeButton{
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.replyInput{
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.commentInput{
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.replyButtonComment{
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}

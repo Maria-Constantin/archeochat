@@ -1,0 +1,36 @@
+.reply {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.replyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+// .username{
+
+// }
+
+// .date{
+
+// }
+
+.replyContent {
+  margin-bottom: 1rem;
+}
+
+.replyMeta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likeButton{
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}

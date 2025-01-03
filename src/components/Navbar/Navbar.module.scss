@@ -1,0 +1,39 @@
+@use '../../styles/base/variables' as *;
+
+.navbar {
+  background-color: $primary;
+  color: $secondary;
+
+  .name {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .linkstoggler {
+    border: none;
+    background: transparent;
+    color: $secondary;
+
+    &:hover {
+      color: $secondary_active;
+    }
+  }
+
+  .menu {
+    .nav-link {
+      color: $secondary;
+      font-size: 1rem;
+      margin: 0 0.5rem;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary_active;
+      }
+
+      &.active {
+        color: $primary_active;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "userId": 1,
+    "username": "historybuff88",
+    "profilePic": "https://randomuser.me/api/portraits/men/1.jpg",
+    "posts": [
+      {
+        "postId": 101,
+        "content": "The new Egyptian exhibit is breathtaking! The hieroglyphs on the Rosetta Stone replica are so detailed.",
+        "datePosted": "2023-12-01",
+        "likes": 150,
+        "replies": [
+          {
+            "replyId": 201,
+            "username": "ancientwanderer",
+            "profilePic": "https://randomuser.me/api/portraits/men/7.jpg",
+            "content": "I loved it too! Did you see the mummification tools on display?",
+            "datePosted": "2023-12-02",
+            "likes": 40
+          },
+          {
+            "replyId": 202,
+            "username": "studentofantiquity",
+            "content": "The Rosetta Stone is the key to understanding ancient languages. Fascinating!",
+            "datePosted": "2023-12-03",
+            "likes": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": 2,
+    "username": "artifacthunter",
+    "profilePic": "https://randomuser.me/api/portraits/men/2.jpg",
+    "posts": [
+      {
+        "postId": 102,
+        "content": "Can anyone share more about the Bronze Age tools in the artifact hall? They seem so advanced for their time.",
+        "datePosted": "2023-12-05",
+        "likes": 120,
+        "replies": [
+          {
+            "replyId": 203,
+            "username": "curator101",
+            "profilePic": "https://randomuser.me/api/portraits/women/2.jpg",
+            "content": "The tools you saw were used for farming and crafting. They represent a significant leap in early technology!",
+            "datePosted": "2023-12-06",
+            "likes": 50
+          },
+          {
+            "replyId": 204,
+            "username": "prehistoricfan",
+            "content": "I believe some of those tools are from Mesopotamia, known as the 'Cradle of Civilization.'",
+            "datePosted": "2023-12-07",
+            "likes": 30
+          }
+        ]
+      }
+    ]
+  }
+]
