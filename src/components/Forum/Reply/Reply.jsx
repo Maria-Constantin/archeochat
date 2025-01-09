@@ -13,6 +13,7 @@ const Reply = ({ reply }) => {
   return (
     <div className={styles.reply}>
       <div className={styles.replyHeader}>
+        <img src="" />
         <span className={styles.username}>{reply.username}</span>
         <span className={styles.date}>{reply.datePosted}</span>
       </div>
