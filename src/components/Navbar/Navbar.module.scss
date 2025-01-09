@@ -1,4 +1,4 @@
-@use '../../styles/base/variables' as *;
+@import '../../styles/main.scss';
 
 .navbar {
   background-color: $primary;
@@ -15,23 +15,23 @@
     color: $secondary;
 
     &:hover {
-      color: $secondary_active;
+      color: $contrast;
     }
   }
 
   .menu {
-    .nav-link {
+    .navLink {
       color: $secondary;
       font-size: 1rem;
       margin: 0 0.5rem;
       text-decoration: none;
 
       &:hover {
-        color: $secondary_active;
+        color: $contrast;
       }
 
       &.active {
-        color: $primary_active;
+        color: $primary;
         font-weight: bold;
       }
     }

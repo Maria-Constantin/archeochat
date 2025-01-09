@@ -1,1 +1,13 @@
-@import 'variables';
+@import  './base/variables.scss';
+@import  './base/mixins.scss';
+@import './base/typography.scss';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+Button{
+  &:hover{
+    @include smooth-transition;
+    transform: scale(1.05);
+  }
+  
+}

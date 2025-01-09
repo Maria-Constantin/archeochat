@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import ForumPage from './pages/Forum/ForumPage'
+import Login from './pages/Authentication/Login/Login';
+import Register from  './pages/Authentication/Register/Register';
 import './App.css'
 
 function App() {
@@ -7,7 +9,7 @@ function App() {
 
   return (
     <>
-      <ForumPage />
+      <Register />
     </>
   )
 }
