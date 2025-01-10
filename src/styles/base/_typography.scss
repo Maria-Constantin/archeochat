@@ -4,10 +4,10 @@
 //Decorative - Cinzel
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-body{
+body, .navLink{
   font-family: "EB Garamond", serif;
 }
 
-h1, h2, h3{
+h1, h2, h3, .name, .offcanvas-header{
   font-family: "Cinzel", serif;
 }

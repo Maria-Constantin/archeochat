@@ -1,21 +1,30 @@
 @import '../../styles/main.scss';
 
 .navbar {
-  background-color: $primary;
-  color: $secondary;
+  background-color: white;
 
   .name {
     font-size: 1.5rem;
-    color: white;
+    font-family: "Cinzel", serif;;
+    text-decoration: none !important;
+    font-weight: bold;
+    color: $primary;
+
+    &:hover{
+      text-decoration: none !important;
+      color: white;
+    }
+    &:active{
+      text-decoration: none !important;
+      color: white;
+    }
   }
 
   .linkstoggler {
     border: none;
-    background: transparent;
-    color: $secondary;
 
     &:hover {
-      color: $contrast;
+      color: none;
     }
   }
 
@@ -36,4 +45,22 @@
       }
     }
   }
+}
+
+.offcanvas{
+  background-color: $primary;
+  color: white;
+}
+
+.navbar-toggler{
+  &:focus{
+    box-shadow: none !important;
+  }
+}
+
+.listIcon{
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
 }

@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import React from 'react';
 import ForumPage from './pages/Forum/ForumPage'
-import Login from './pages/Authentication/Login/Login';
-import Register from  './pages/Authentication/Register/Register';
 import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Register />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<ForumPage/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

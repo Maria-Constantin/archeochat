@@ -3,9 +3,11 @@ import NavbarComponent from "../../components/Navbar/Navbar";
 import Thread from "../../components/Forum/Thread/Thread";
 import mockData from "../../utils/mockdata.json";
 
+import styles from './ForumPage.module.scss';
+
 const ForumPage = () => {
   return (
-    <div className="forum-page">
+    <div className={styles.forumPage}>
       <NavbarComponent />
       <div className="forum-content">
         <div className="thread-list">

@@ -29,7 +29,10 @@ export default defineConfig({
     ],
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-bootstrap'],
+    include: ['react', 'react-dom', 'react-bootstrap', 'react-router'],
+  },
+  define: {
+    'process.env': process.env
   },
   silenceDeprecations: ['mixed-decls']
 })

@@ -1,3 +1,5 @@
+@import '../../../styles/main.scss';
+
 .post{
   display: flex;
   flex-direction: column;
@@ -66,4 +68,15 @@
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  background-color: $contrast !important;
+  border-color: $contrast !important;
+
+  &:hover{
+    background-color: $contrast-active !important;
+    border-color: $contrast-active !important;
+  }
+  &:active{
+    background-color: $contrast-active !important;
+    border-color: $contrast-active !important;
+  }
 }
