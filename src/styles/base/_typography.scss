@@ -1,13 +1,28 @@
-//Base - Garamond
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-//Decorative - Cinzel
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
-body, .navLink{
-  font-family: "EB Garamond", serif;
+// Body text
+@mixin roboto-font($weight: 400) {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: $weight;
 }
 
-h1, h2, h3, .name, .offcanvas-header{
-  font-family: "Cinzel", serif;
+// Headings and titles
+@mixin poppins-font($weight: 400) {
+  font-family: 'Poppins', Helvetica, sans-serif;
+  font-weight: $weight;
+}
+
+// Quotes and special text
+@mixin merriweather-font($weight: 400) {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: $weight;
+}
+
+// Buttons and interactive elements
+@mixin lato-font($weight: 400) {
+  font-family: 'Lato', Tahoma, sans-serif;
+  font-weight: $weight;
+}
+
+// Code and preformatted text
+@mixin courier-font() {
+  font-family: 'Courier New', Consolas, monospace;
 }

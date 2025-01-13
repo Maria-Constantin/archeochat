@@ -1,6 +1,11 @@
+@import '../../../styles/main.scss';
+
 .reply {
-  padding: 1rem;
-  border: 1px solid #ccc;
+  background-color: $card_background;
+  color: $primary_text;
+  border: 1px solid $primary_border;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
 }
 
@@ -8,21 +13,51 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
+
+  .username {
+    font-weight: bold;
+    color: $link_text;
+  }
+
+  .date {
+    color: $secondary_text;
+  }
+
+  .profilePic {
+    border-radius: 2rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 0.5rem;
+  }
 }
 
 .replyContent {
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
-.replyMeta{
+.replyMeta {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  
+  .likeButton {
+    background-color: transparent;
+    color: $primary_text;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+      color: $link_text;
+    }
+    
+    
+  }
 }
 
-.likeButton{
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
+.mediaImage,
+.mediaVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }

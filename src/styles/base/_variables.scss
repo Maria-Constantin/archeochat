@@ -1,5 +1,32 @@
-$primary: #11263B;
-$secondary: #6F8086;
-$contrast: #9CAEA9;
-$contrast-active: #CCDAD1;
-$light: #EBEBEB;
+// Background Colors
+$primary_background: #2a2a2a; 
+$secondary_background: #3d3d3d;
+$ternary_background: #4b5d67;
+
+// Text Colors
+$primary_text: #D1D1D1;
+$secondary_text: #B2B2B2;
+$link_text: #A16E4A;
+$error_text: #B84B4B;
+
+// Button Colors
+$primary_button: #9E6F4B;
+$secondary_button: #B99F87;
+$hover_button: #7A4C2F;
+
+// Borders & Dividers
+$primary_border: #474747;
+$focused_border: #A16E4A;
+
+// Cards & Section Backgrounds
+$card_background: #3c3c3c;
+$card_hover_background: #585858;
+
+// Accent Colors
+$contrast: #6C7A3F;
+$contrast-active: #4a542b;
+
+$success: #607D3B;
+$warning: #B88E4A;
+$info: #506B8E;
+

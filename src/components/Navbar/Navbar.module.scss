@@ -1,66 +1,104 @@
 @import '../../styles/main.scss';
 
-.navbar {
-  background-color: white;
+.navbarContainer{
+  background-color: $primary_background;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
 
-  .name {
-    font-size: 1.5rem;
-    font-family: "Cinzel", serif;;
-    text-decoration: none !important;
-    font-weight: bold;
-    color: $primary;
-
-    &:hover{
-      text-decoration: none !important;
-      color: white;
-    }
-    &:active{
-      text-decoration: none !important;
-      color: white;
-    }
+  .brandImage {
+    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
   }
 
-  .linkstoggler {
-    border: none;
+  .menu{
+    justify-content: flex-end;
+    width: 100%;
+    gap: 0.2rem;
+    padding: 0 0.7rem;
+    align-items: center;
 
-    &:hover {
-      color: none;
-    }
-  }
-
-  .menu {
-    .navLink {
-      color: $secondary;
-      font-size: 1rem;
-      margin: 0 0.5rem;
-      text-decoration: none;
-
-      &:hover {
-        color: $contrast;
+    .navLink{
+      color: #4e4e4e;
+  
+      &:hover{
+        color: $link_text;
       }
 
-      &.active {
-        color: $primary;
-        font-weight: bold;
+      &:focus{
+        color: $link_text;
+      }
+
+      .nav-link, .active{
+        color: $link_text !important;
+      }
+      &.active{
+        color: $link_text !important;
       }
     }
+
+
+
+    i{
+      font-size: 1.5rem;
+    }
+  }
+
+  .navbar-nav{
+    justify-content: space-between;
   }
 }
 
-.offcanvas{
-  background-color: $primary;
-  color: white;
+.navbar-expand{
+  justify-content: space-between !important;
+
 }
 
-.navbar-toggler{
-  &:focus{
-    box-shadow: none !important;
-  }
-}
-
-.listIcon{
-  color: white;
+.profilePicture{
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
+  border: 2px solid $primary_border;
+  cursor: pointer;
+
+  // inactive
+  &.dropdown-toggle{
+    color: $primary_border;
+  }
+
+  // active
+  &.dropdown-toggle:focus,
+  &.dropdown-toggle.show{
+    color: $link_text;
+  }
+}
+
+.navbarContainer .menu .navLink.active {
+  color: $link_text !important;
+}
+
+.navbar-expand .navbar-nav .dropdown-menu{
+  background-color: $ternary_background !important;
+  color: $primary_text !important;
+
+  .dropdown-item{
+    &:hover{
+      background-color: $primary_background;
+      color: $primary_text;
+    }
+    &:focus{
+      background-color: $primary_background;
+      color: $primary_text;
+    }
+    &.active{
+      background-color: $primary_background;
+      color: $primary_text;
+    }
+  }
+}
+
+.navbar {
+  --bs-navbar-active-color: #A16E4A;
 }

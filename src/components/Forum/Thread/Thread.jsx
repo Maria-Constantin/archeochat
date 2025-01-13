@@ -6,9 +6,9 @@ import mockdata from "../../../utils/mockdata.json";
 const Thread = () => {
   return (
     <div className={styles.thread}>
-      {mockdata.map((user) => (
+      {mockdata.map(user => (
         <div key={user.userId}>
-          {user.posts.map((post) => (
+          {user.posts.map(post => (
             <Post key={post.postId} post={post} user={user} />
           ))}
         </div>

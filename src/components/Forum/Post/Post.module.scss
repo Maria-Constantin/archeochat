@@ -1,82 +1,214 @@
 @import '../../../styles/main.scss';
 
-.post{
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.postHeader{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.userInfo{
-  display: flex;
-  align-items: center;
-}
-
-.profilePic{
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-}
-
-.username{
-  margin-left: 1rem;
-}
-
-.postContent{
-  margin: 0.5rem 0;
-}
-
-.postMeta{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.toggleReplies{
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-}
-
-.likeButton{
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-}
-
-.replyInput{
-  display: flex;
-  align-items: center;
-  margin-top: 0.5rem;
-}
-
-.commentInput{
+.post {
+  background-color: $secondary_background;
+  color: $primary_text;
+  border: 1px solid $primary_border;
   padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    max-width: 600px;
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 800px;
+  }
+
 }
 
-.replyButtonComment{
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  background-color: $contrast !important;
-  border-color: $contrast !important;
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 
-  &:hover{
-    background-color: $contrast-active !important;
-    border-color: $contrast-active !important;
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  &:active{
-    background-color: $contrast-active !important;
-    border-color: $contrast-active !important;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+
+  .profilePic {
+    border-radius: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+
+    @media (max-width: 320px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
+
+  .username {
+    font-weight: bold;
+    color: $link_text;
+    font-size: 0.9rem;
+
+    @media (max-width: 320px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.date {
+  color: $secondary_text;
+  font-size: 0.8rem;
+
+  @media (max-width: 320px) {
+    font-size: 0.7rem;
+  }
+}
+
+.postContent {
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 320px) {
+    font-size: 0.9rem;
+  }
+}
+
+.postMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+
+  .saveButtonSection,
+  .likeSection,
+  .shareSection,
+  .viewCount {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    i {
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    span {
+      margin-left: 0.5rem;
+      font-size: 0.9rem;
+      color: $primary_text;
+    }
+
+    &:hover {
+      span {
+        color: $primary_text;
+      }
+    }
+  }
+
+  .likeIcon, .saveIcon {
+    color: $contrast; 
+  }
+
+  @media (min-width: 768px) {
+    .postMeta{
+      padding: 1rem 0;
+      .commentsCount{
+        font-size: 1rem;
+      }
+      .saveButtonSection, .likeSection{
+        font-size: 1rem;
+        i{
+          font-size: 1rem;
+        }
+        span{
+          font-size: 1rem;
+        }
+      }
+    }
+   
+    
+  }
+}
+
+.replyInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .commentInput {
+    background-color: $ternary_background;
+    color: $primary_text;
+    border: 1px solid $ternary_background;
+    font-size: 0.9rem;
+
+    &:hover{
+      background-color: #405058;
+      border-color: #405058;
+    }
+    &:focus{
+      background-color: #405058;
+      border-color: #405058;
+      box-shadow: none;
+    }
+  }
+
+  .replyButtonComment {
+    background-color: $contrast;
+    border-color: $contrast;
+    color: $primary_text;
+    font-size: 0.9rem;
+    flex: none;
+
+    &:hover {
+      background-color: $contrast;
+      border-color: $contrast;
+    }
+
+  }
+}
+
+.repliesSection {
+  margin-top: 15px;
+}
+
+.postTags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+
+  .tag {
+    font-size: 0.7rem;
+    background-color: $primary_background;
+    color: $info;
+    box-shadow: 0.1rem 0.1rem $link_text inset;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.mediaImage,
+.mediaVideo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 3px solid $primary_border;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.mediaImage:hover,
+.mediaVideo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }

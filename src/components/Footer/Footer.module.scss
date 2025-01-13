@@ -1,0 +1,74 @@
+@import '../../styles/main.scss';
+
+.footer {
+  background-color: $secondary_background;
+  color: $primary_text;
+  padding: 2rem 0;
+  font-size: 1rem;
+
+  .footerSection {
+    margin-bottom: 1.5rem;
+  }
+
+  .footerTitle {
+    color: $primary_text;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .footerText {
+    color: $secondary_text;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .footerLinks {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footerLink {
+      color: $link_text;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $hover_button;
+      }
+    }
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 150px;
+
+    .socialIcon {
+      color: $primary_text;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $link_text;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}
+
+.linksContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

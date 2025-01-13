@@ -1,14 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// import { fileURLToPath } from 'url';
-// import { dirname, join } from 'path';
-
-// const currentDir = dirname(fileURLToPath(import.meta.url));
+import { qrcode } from 'vite-plugin-qrcode'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), qrcode() ],
   server: {
+    host: true,
     watch: {
       usePolling: true
     }

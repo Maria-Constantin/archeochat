@@ -4,10 +4,28 @@
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-Button{
-  &:hover{
-    @include smooth-transition;
-    transform: scale(1.05);
-  }
-  
+body {
+  @include roboto-font(400); 
+  background-color: $primary_background;
+}
+
+h1, h2, h3 {
+  @include poppins-font(600); 
+}
+
+blockquote {
+  @include merriweather-font(400); 
+  font-style: italic;
+}
+
+button, .btn {
+  @include lato-font(700);
+}
+
+pre, code {
+  @include courier-font();
+}
+
+.navbar-nav .nav-link.active {
+  color: #A16E4A !important;
 }

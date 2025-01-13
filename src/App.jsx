@@ -1,5 +1,5 @@
 import React from 'react';
-import ForumPage from './pages/Forum/ForumPage'
+import ForumPage from './pages/Forum/ForumPage';
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router';
 

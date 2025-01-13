@@ -3,27 +3,92 @@
     "userId": 1,
     "username": "historybuff88",
     "profilePic": "https://randomuser.me/api/portraits/men/1.jpg",
+    "bio": "Lover of ancient history and a frequent museum-goer. I enjoy discussing everything from Ancient Egypt to Greek mythology.",
+    "followersCount": 350,
+    "followingCount": 50,
+    "activityHistory": [
+      {
+        "date": "2023-11-15",
+        "action": "Created a post",
+        "details": "Posted about the new Egyptian exhibit"
+      },
+      {
+        "date": "2023-12-01",
+        "action": "Liked a post",
+        "details": "Liked a post about the Bronze Age tools"
+      }
+    ],
     "posts": [
       {
         "postId": 101,
         "content": "The new Egyptian exhibit is breathtaking! The hieroglyphs on the Rosetta Stone replica are so detailed.",
-        "datePosted": "2023-12-01",
+        "datePosted": "2023-12-01T14:30Z",
         "likes": 150,
+        "shares": 20,
+        "commentsCount": 8,
+        "category": "Exhibits",
+        "tags": [
+          "Egypt",
+          "RosettaStone",
+          "Archaeology"
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://thumbs.dreamstime.com/b/replica-rosetta-stone-british-museum-replica-famous-rosetta-stone-british-museum-london-143966950.jpg",
+            "caption": "A replica of the Rosetta Stone"
+          }
+        ],
         "replies": [
           {
             "replyId": 201,
             "username": "ancientwanderer",
             "profilePic": "https://randomuser.me/api/portraits/men/7.jpg",
             "content": "I loved it too! Did you see the mummification tools on display?",
-            "datePosted": "2023-12-02",
-            "likes": 40
+            "datePosted": "2023-12-02T10Z",
+            "likes": 40,
+            "commentsCount": 2,
+            "media": [
+              {
+                "type": "image",
+                "url": "https://coimages.sciencemuseumgroup.org.uk/2/331/medium_a634903.jpg",
+                "caption": "Mummification tools on display"
+              }
+            ],
+            "comments": [
+              {
+                "commentId": 301,
+                "username": "historybuff88",
+                "content": "Yes, those tools were incredible! The craftsmanship was amazing.",
+                "datePosted": "2023-12-02T11:00Z",
+                "likes": 5
+              }
+            ]
           },
           {
             "replyId": 202,
             "username": "studentofantiquity",
+            "profilePic": "https://randomuser.me/api/portraits/men/3.jpg",
             "content": "The Rosetta Stone is the key to understanding ancient languages. Fascinating!",
-            "datePosted": "2023-12-03",
-            "likes": 35
+            "datePosted": "2023-12-03T08:45Z",
+            "likes": 35,
+            "commentsCount": 3,
+            "media": [
+              {
+                "type": "video",
+                "url": "https://example.com/rosetta-stone-video.mp4",
+                "caption": "Video tour of the Rosetta Stone exhibit"
+              }
+            ],
+            "comments": [
+              {
+                "commentId": 302,
+                "username": "historybuff88",
+                "content": "Absolutely! It unlocked so much of ancient Egyptian writing.",
+                "datePosted": "2023-12-03T09:00Z",
+                "likes": 4
+              }
+            ]
           }
         ]
       }
@@ -33,27 +98,232 @@
     "userId": 2,
     "username": "artifacthunter",
     "profilePic": "https://randomuser.me/api/portraits/men/2.jpg",
+    "bio": "Archaeologist by profession and enthusiast by passion. Always on the lookout for rare artifacts and ancient tools.",
+    "followersCount": 500,
+    "followingCount": 120,
+    "activityHistory": [
+      {
+        "date": "2023-11-20",
+        "action": "Created a post",
+        "details": "Posted about the Bronze Age tools in the museum"
+      },
+      {
+        "date": "2023-12-06",
+        "action": "Liked a post",
+        "details": "Liked a post about Ancient Egyptian mummies"
+      }
+    ],
     "posts": [
       {
         "postId": 102,
         "content": "Can anyone share more about the Bronze Age tools in the artifact hall? They seem so advanced for their time.",
-        "datePosted": "2023-12-05",
+        "datePosted": "2023-12-05T16:00Z",
         "likes": 120,
+        "shares": 15,
+        "commentsCount": 6,
+        "category": "Artifacts",
+        "tags": [
+          "BronzeAge",
+          "Technology",
+          "AncientTools"
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://monaghan.ie/museum/wp-content/uploads/sites/2/2016/11/BronzeAgeWeapons.jpg",
+            "caption": "A collection of Bronze Age tools"
+          }
+        ],
         "replies": [
           {
             "replyId": 203,
             "username": "curator101",
             "profilePic": "https://randomuser.me/api/portraits/women/2.jpg",
             "content": "The tools you saw were used for farming and crafting. They represent a significant leap in early technology!",
-            "datePosted": "2023-12-06",
-            "likes": 50
+            "datePosted": "2023-12-06T09:30Z",
+            "likes": 50,
+            "commentsCount": 4,
+            "media": [
+              {
+                "type": "image",
+                "url": "https://www.archaeology.wiki/wp-content/uploads/2018/10/Alexandria-Troas-farming-tools-7.gif",
+                "caption": "Bronze Age farming tools"
+              }
+            ],
+            "comments": [
+              {
+                "commentId": 303,
+                "username": "artifacthunter",
+                "content": "Such a huge leap for its time! It’s amazing to see how advanced they were.",
+                "datePosted": "2023-12-06T10:00Z",
+                "likes": 7
+              }
+            ]
           },
           {
             "replyId": 204,
             "username": "prehistoricfan",
+            "profilePic": "https://randomuser.me/api/portraits/men/4.jpg",
             "content": "I believe some of those tools are from Mesopotamia, known as the 'Cradle of Civilization.'",
-            "datePosted": "2023-12-07",
-            "likes": 30
+            "datePosted": "2023-12-07T11:15Z",
+            "likes": 30,
+            "commentsCount": 2,
+            "media": [
+              {
+                "type": "image",
+                "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm2xE7z9nrh5OaNfZK0KWcHuuG_ZYIv_q_9g&s",
+                "caption": "Mesopotamian tools from ancient civilizations"
+              }
+            ],
+            "comments": [
+              {
+                "commentId": 304,
+                "username": "artifacthunter",
+                "content": "Definitely! Mesopotamia played such an important role in the development of early civilizations.",
+                "datePosted": "2023-12-07T12:00Z",
+                "likes": 6
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": 3,
+    "username": "ancientartlover",
+    "profilePic": "https://randomuser.me/api/portraits/men/5.jpg",
+    "bio": "Passionate about ancient art and cultural heritage. I enjoy exploring ancient ruins and the hidden gems of lost civilizations.",
+    "followersCount": 420,
+    "followingCount": 80,
+    "activityHistory": [
+      {
+        "date": "2023-11-18",
+        "action": "Created a post",
+        "details": "Posted about the ancient Greek pottery collection"
+      },
+      {
+        "date": "2023-12-04",
+        "action": "Liked a post",
+        "details": "Liked a post about Roman frescoes"
+      }
+    ],
+    "posts": [
+      {
+        "postId": 103,
+        "content": "The ancient Greek pottery collection is an absolute masterpiece! The designs are so intricate.",
+        "datePosted": "2023-12-04T14:30Z",
+        "likes": 180,
+        "shares": 10,
+        "commentsCount": 5,
+        "category": "Art",
+        "tags": [
+          "GreekArt",
+          "Pottery",
+          "AncientCivilizations"
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://theancienthome.com/cdn/shop/articles/Greek_pottery_blog_bg.jpg?v=1646993818",
+            "caption": "Greek pottery collection"
+          }
+        ],
+        "replies": [
+          {
+            "replyId": 205,
+            "username": "classicalfan",
+            "profilePic": "https://randomuser.me/api/portraits/men/6.jpg",
+            "content": "The Greek pottery is so symbolic. Each piece tells a story.",
+            "datePosted": "2023-12-05T10:00Z",
+            "likes": 40,
+            "commentsCount": 3,
+            "media": [
+              {
+                "type": "image",
+                "url": "https://www.worldhistory.org/img/r/p/500x600/622.jpg?v=1643565615",
+                "caption": "Symbolic pottery from ancient Greece"
+              }
+            ],
+            "comments": [
+              {
+                "commentId": 305,
+                "username": "ancientartlover",
+                "content": "Absolutely! The symbolism and craftsmanship are amazing.",
+                "datePosted": "2023-12-05T11:30Z",
+                "likes": 8
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": 4,
+    "username": "mysticalarchaeo",
+    "profilePic": "https://randomuser.me/api/portraits/women/3.jpg",
+    "bio": "A lover of ancient mysteries and archaeological discoveries. I specialize in unearthing the secrets of lost civilizations.",
+    "followersCount": 450,
+    "followingCount": 90,
+    "activityHistory": [
+      {
+        "date": "2023-11-25",
+        "action": "Created a post",
+        "details": "Posted about the Lost City of Atlantis"
+      },
+      {
+        "date": "2023-12-10",
+        "action": "Liked a post",
+        "details": "Liked a post about the Pyramids of Giza"
+      }
+    ],
+    "posts": [
+      {
+        "postId": 104,
+        "content": "Could the Lost City of Atlantis actually exist? There's so much mystery surrounding it.",
+        "datePosted": "2023-12-10T18:30Z",
+        "likes": 220,
+        "shares": 30,
+        "commentsCount": 12,
+        "category": "Mysteries",
+        "tags": [
+          "Atlantis",
+          "LostCities",
+          "Archaeology"
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://i.pinimg.com/originals/f3/ec/27/f3ec27afa563088f65c4b68bb5836e6d.jpg",
+            "caption": "Artistic representation of Atlantis"
+          }
+        ],
+        "replies": [
+          {
+            "replyId": 206,
+            "username": "mysteryseeker",
+            "profilePic": "https://randomuser.me/api/portraits/men/8.jpg",
+            "content": "I think Atlantis was a real place! There's so much evidence to suggest it could be true.",
+            "datePosted": "2023-12-11T08:00Z",
+            "likes": 55,
+            "commentsCount": 4,
+            "media": [
+              {
+                "type": "image",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Atlantis_Kircher_Mundus_subterraneus_1678.jpg",
+                "caption": "Map showing potential locations of Atlantis"
+              }
+            ],
+            "comments": [
+              {
+                "commentId": 306,
+                "username": "mysticalarchaeologist",
+                "content": "It’s a fascinating concept! I hope one day we can find definitive proof.",
+                "datePosted": "2023-12-11T09:00Z",
+                "likes": 9
+              }
+            ]
           }
         ]
       }
