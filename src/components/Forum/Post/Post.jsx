@@ -69,7 +69,7 @@ const Post = ({ post, user }) => {
 
         {/* share section */}
         <div className={styles.shareSection}>
-          <i className="bi bi-share"></i>
+          <i className={`bi bi-share ${styles.shareIcon}`}></i>
           <span>Share</span>
         </div>
 
@@ -81,7 +81,7 @@ const Post = ({ post, user }) => {
 
         {/* views section */}
         <div className={styles.viewCount}>
-          <i className="bi bi-eye"></i>
+          <i className={`bi bi-eye ${styles.viewIcon}`}></i>
           <span>{post.viewCount} Views</span>
         </div>
 

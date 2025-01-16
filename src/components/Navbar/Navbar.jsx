@@ -34,6 +34,14 @@ function NavbarComponent() {
             <i className="bi bi-house"></i>
           </Nav.Link>
 
+          <Nav.Link
+              href="/Trending"
+              className={style.navLink}
+              active={activeLink === '/Trending'}
+            >
+              <i className="bi bi-graph-up"></i>
+            </Nav.Link>
+
           <Nav.Link 
             href="/Saved" 
             className={style.navLink}

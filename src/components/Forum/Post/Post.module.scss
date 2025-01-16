@@ -4,211 +4,211 @@
   background-color: $secondary_background;
   color: $primary_text;
   border: 1px solid $primary_border;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
   border-radius: 0.5rem;
   width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
-  @media (min-width: 1200px) {
-    max-width: 600px;
+  @include roboto-font;
+
+  &:hover {
+    background-color: lighten($secondary_background, 2%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1024px) {
+    max-width: 600px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media (min-width: 1440px) {
     max-width: 800px;
   }
 
-}
-
-.postHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-
-  @media (max-width: 320px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.userInfo {
-  display: flex;
-  align-items: center;
-
-  .profilePic {
-    border-radius: 1.5rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-right: 0.5rem;
-
-    @media (max-width: 320px) {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
-
-  .username {
-    font-weight: bold;
-    color: $link_text;
-    font-size: 0.9rem;
-
-    @media (max-width: 320px) {
-      font-size: 0.8rem;
-    }
-  }
-}
-
-.date {
-  color: $secondary_text;
-  font-size: 0.8rem;
-
-  @media (max-width: 320px) {
-    font-size: 0.7rem;
-  }
-}
-
-.postContent {
-  margin-bottom: 0.5rem;
-
-  @media (max-width: 320px) {
-    font-size: 0.9rem;
-  }
-}
-
-.postMeta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.2rem;
-  margin-bottom: 0.5rem;
-
-  .saveButtonSection,
-  .likeSection,
-  .shareSection,
-  .viewCount {
+  .postHeader {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    cursor: pointer;
+    margin-bottom: 8px;
 
-    i {
-      font-size: 1rem;
+    .userInfo {
+      display: flex;
+      align-items: center;
+
+      .profilePic {
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .username {
+        font-weight: bold;
+        color: $link_text;
+        font-size: 0.9rem;
+
+        &:hover {
+          color: darken($link_text, 10%);
+        }
+      }
+    }
+
+    .date {
+      color: $secondary_text;
+      font-size: 0.8rem;
+
+      @media (max-width: 320px) {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .postContent {
+    margin-bottom: 1rem;
+  }
+
+  .postMeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+
+    .commentsCount,
+    .saveButtonSection,
+    .likeSection,
+    .shareSection,
+    .viewCount {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
       transition: color 0.3s ease;
-    }
 
-    span {
-      margin-left: 0.5rem;
-      font-size: 0.9rem;
-      color: $primary_text;
-    }
+      i {
+        font-size: 1rem;
+      }
 
-    &:hover {
       span {
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
         color: $primary_text;
       }
-    }
-  }
 
-  .likeIcon, .saveIcon {
-    color: $contrast; 
-  }
-
-  @media (min-width: 768px) {
-    .postMeta{
-      padding: 1rem 0;
-      .commentsCount{
-        font-size: 1rem;
-      }
-      .saveButtonSection, .likeSection{
-        font-size: 1rem;
-        i{
-          font-size: 1rem;
-        }
-        span{
-          font-size: 1rem;
+      &:hover {
+        span {
+          color: lighten($primary_text, 10%);
         }
       }
     }
-   
-    
-  }
-}
 
-.replyInput {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+    .likeIcon, 
+    .saveIcon,
+    .shareIcon,
+    .viewIcon {
+      color: $info; 
+      transition: color 0.3s ease;
 
-  .commentInput {
-    background-color: $ternary_background;
-    color: $primary_text;
-    border: 1px solid $ternary_background;
-    font-size: 0.9rem;
-
-    &:hover{
-      background-color: #405058;
-      border-color: #405058;
+      &:hover {
+        color: lighten($info, 10%);;
+      }
     }
-    &:focus{
-      background-color: #405058;
-      border-color: #405058;
-      box-shadow: none;
+
+    @media (min-width: 768px) {
+      .commentsCount,
+      .saveButtonSection,
+      .likeSection,
+      .shareSection,
+      .viewCount {
+        span {
+          display: none;
+        }
+      }
+
+      i{
+        font-size: 1.5rem;
+      }
     }
   }
 
-  .replyButtonComment {
-    background-color: $contrast;
-    border-color: $contrast;
-    color: $primary_text;
-    font-size: 0.9rem;
-    flex: none;
+  .replyInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .commentInput {
+      background-color: lighten($info, 20%);
+      color: $primary_text;
+      border: 1px solid $info;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+
+      &:hover, &:focus {
+        outline: $info;
+        background-color: lighten($info, 30%);
+        border-color: lighten($info, 30%);
+      }
+    }
+
+    .replyButtonComment {
+      background-color: darken($info, 10%);
+      border-color: darken($info, 10%);
+      color: $secondary_text;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($info, 10%);
+        border-color: lighten($info, 10%);
+      }
+    }
+  }
+
+  .repliesSection {
+    margin-top: 15px;
+  }
+
+  .postTags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+
+    .tag {
+      font-size: 0.8rem;
+      background-color: $primary_background;
+      color: $info;
+      box-shadow: 0.1rem 0.1rem $link_text inset;
+      padding: 0.3rem 0.8rem;
+      border-radius: 1rem;
+      margin-right: 0.3rem;
+      margin-bottom: 0.3rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($primary_background, 10%);
+        color: lighten($info, 10%);
+      }
+    }
+  }
+
+  .mediaImage, .mediaVideo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    border: 3px solid $primary_border;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      background-color: $contrast;
-      border-color: $contrast;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     }
-
   }
-}
-
-.repliesSection {
-  margin-top: 15px;
-}
-
-.postTags {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-
-  .tag {
-    font-size: 0.7rem;
-    background-color: $primary_background;
-    color: $info;
-    box-shadow: 0.1rem 0.1rem $link_text inset;
-    padding: 0.3rem 0.8rem;
-    border-radius: 1rem;
-    margin-right: 0.2rem;
-    margin-bottom: 0.2rem;
-  }
-}
-
-.mediaImage,
-.mediaVideo {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  border: 3px solid $primary_border;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.mediaImage:hover,
-.mediaVideo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }

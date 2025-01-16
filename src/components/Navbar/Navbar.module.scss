@@ -102,3 +102,9 @@
 .navbar {
   --bs-navbar-active-color: #A16E4A;
 }
+
+@media (min-width: 768px) {
+  .navbarContainer{
+    display: none !important;
+  }
+}

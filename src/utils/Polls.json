@@ -1,0 +1,27 @@
+{
+  "polls": {
+    "question": "Could the Lost City of Atlantis have existed?",
+    "options": [
+      {
+        "id": 1,
+        "text": "Yes, it existed!",
+        "votes": 7
+      },
+      {
+        "id": 2,
+        "text": "No, it's just a myth.",
+        "votes": 12
+      },
+      {
+        "id": 3,
+        "text": "Maybe, there’s some truth to it.",
+        "votes": 3
+      },
+      {
+        "id": 4,
+        "text": "I’m not sure.",
+        "votes": 1
+      }
+    ]
+  }
+}
