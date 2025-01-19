@@ -96,26 +96,54 @@
         color: $primary_text;
       }
 
-      &:hover {
-        span {
-          color: lighten($primary_text, 10%);
+      @media (min-width: 768px) {
+        i, span{
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        i, span{
+          font-size: 1rem;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        i, span{
+          font-size: 1.2rem;
         }
       }
     }
 
-    .likeIcon, 
-    .saveIcon,
-    .shareIcon,
-    .viewIcon {
-      color: $info; 
-      transition: color 0.3s ease;
-
+    .likeIcon {
+      color: #607D3B;
       &:hover {
-        color: lighten($info, 10%);;
+        color: lighten(#607D3B, 10%);
       }
     }
+    
+    .saveIcon {
+      color: #9E6F4B;
+      &:hover {
+        color: lighten(#9E6F4B, 10%);
+      }
+    }
+    
+    .shareIcon {
+      color: #506B8E;
+      &:hover {
+        color: lighten(#506B8E, 10%);
+      }
+    }
+    
+    .viewIcon {
+      color: #D1D1D1;
+      &:hover {
+        color: lighten(#D1D1D1, 10%);
+      }
+    }    
 
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       .commentsCount,
       .saveButtonSection,
       .likeSection,
@@ -130,6 +158,25 @@
         font-size: 1.5rem;
       }
     }
+
+    @media (min-width: 768px) {
+      i, span{
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      i, span{
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      i, span{
+        font-size: 1.2rem;
+      }
+    }
+    
   }
 
   .replyInput {

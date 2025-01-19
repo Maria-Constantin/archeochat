@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Form, Button, ListGroup } from 'react-bootstrap';
-import { Doughnut, Pie } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from 'chart.js';
 
 import pollsdata from '../../utils/Polls.json';
@@ -13,11 +13,13 @@ const RightSideBar = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [pollData, setPollData] = useState(pollsdata.polls);
   const [showGraph, setShowGraph] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
 
   const handlePollChange = (event) => {
     setSelectedAnswer(event.target.value);
   };
 
+  // map colours
   const [chartColors, setChartColors] = useState({
     primaryButton: '#9E6F4B',
     secondaryButton: '#B99F87',
@@ -27,6 +29,7 @@ const RightSideBar = () => {
     white: '#FFFFFF'
   });
 
+  // chart colours
   useEffect(() => {
     const rootStyle = getComputedStyle(document.documentElement);
     setChartColors({
@@ -37,6 +40,26 @@ const RightSideBar = () => {
       info: rootStyle.getPropertyValue('--info').trim(),
       white: rootStyle.getPropertyValue('--white').trim(),
     });
+  }, []);
+
+  // responsive legend font
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 576) {
+        setFontSize(12); 
+      } else if (window.innerWidth < 768) {
+        setFontSize(14); 
+      } else {
+        setFontSize(16); 
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handlePollSubmit = () => {
@@ -64,7 +87,7 @@ const RightSideBar = () => {
 
   const chartOptions = {
     responsive: true,
-    maintainAspecRatio: false,
+    maintainAspecRatio: true,
     aspectRatio: 1,
     plugins: {
       legend: {
@@ -73,12 +96,11 @@ const RightSideBar = () => {
         labels: {
           textAlign: 'left',
           font: {
-            size: 14,
-            family: 'Arial',
+            size: fontSize,
             color: '#D1D1D1',
           },
           boxWidth: 20,
-          boxHeight: 10,
+          padding: 10,
         },
       },
     },
@@ -103,7 +125,7 @@ const RightSideBar = () => {
       {/* Trending Topics Section */}
       {trendingdata?.trendingTitles && trendingdata.trendingTitles.length > 0 && (
         <Container className={styles.trendingContainer}>
-          <h5 className={styles.sectionTitle}>Trending Topics</h5>
+          <h5 className={styles.sectionTitle}>Trending</h5>
           <ListGroup>
             {trendingdata.trendingTitles.map((title, index) => (
               <ListGroup.Item key={index} className={styles.trendingItem}>
@@ -118,7 +140,7 @@ const RightSideBar = () => {
       {!showGraph && pollData?.question && (
         <Container className={styles.pollsContainer}>
           <h5 className={styles.pollsTitle}>{pollData.question}</h5>
-          <Form>
+          <Form className={styles.formContainer}>
             {pollData.options.map((option) => (
               <Form.Check
                 type="radio"
