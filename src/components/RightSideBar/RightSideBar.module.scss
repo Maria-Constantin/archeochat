@@ -12,6 +12,34 @@
   padding: 1rem;
   overflow-y: auto;
 
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1A1A1A;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary_nav;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $link_text;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #1A1A1A;
+    border-radius: 10px;
+  }
+
+
+  &:focus-within {
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary_button;
+    }
+  }
+
   @media (min-width: 1024px) {
     display: flex;
     padding-top: 2rem;
@@ -154,7 +182,7 @@
       background-color: $primary_button;
       border-radius: 1rem;
       border: none;
-      
+
       transition: all 0.3s ease;
       margin-top: 1rem;
       color: white;

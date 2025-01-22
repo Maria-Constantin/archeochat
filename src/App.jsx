@@ -1,6 +1,6 @@
 import React from 'react';
 import ForumPage from './pages/Forum/ForumPage';
-import './App.css'
+import './App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router';
 import Quizzes from './pages/Quizzes/Quizzes';
 
