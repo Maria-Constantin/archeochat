@@ -1,54 +1,55 @@
 @import '../../styles/main.scss';
 
-.quizContainer {
-  display: flex;
-  width: 100%;
-}
-
 .cardsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   padding: 1rem;
-
+  
   @media (min-width: 768px) {
-    padding: 2rem;
+    .cardContainer {
+      width: 45%; 
+    }
   }
 }
 
 .cardContainer {
-  width: 100%;
-  margin-bottom: 2rem;
+  background-color: #1A1A1A !important;
+  border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  margin-bottom: 1.5rem;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(42, 42, 42, 0.4);
   }
 
   .video {
     width: 100%;
+    height: auto;
   }
 
-  .card-title{
-    font-size: 1.5rem;
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
   }
 
   .cardBody {
-    color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
+    justify-content: flex-start;
+    padding: 1rem;
+    font-size: 0.9rem;
+    height: 100%;  // Ensure the content stretches to fit the card height
 
     .buttonsCardContainer {
       display: flex;
       gap: 1rem;
       width: 100%;
       justify-content: space-between;
+      padding-top: 1rem;
 
       Button {
         flex-grow: 1;
@@ -56,7 +57,8 @@
         background-color: #D4A96D;
         color: white;
         border: none;
-        padding: 0.7rem;
+        padding: 0.5rem;
+        font-size: 0.9rem;
         transition: background-color 0.3s, transform 0.3s;
 
         &:hover {
