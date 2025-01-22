@@ -10,7 +10,7 @@ function NavbarComponent() {
   const profilePicture = "https://fastly.picsum.photos/id/966/200/200.jpg?hmac=RmCTCEjm_X8xE8OAxo2-eCKM4eJu4LGQu-8U6Y3OmEM";
 
   const location = useLocation();
-  const [ activeLink, setActiveLink ] = useState('/');
+  const [activeLink, setActiveLink] = useState('/');
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -27,7 +27,7 @@ function NavbarComponent() {
 
           {/* Links */}
           <Nav.Link
-            href="/" 
+            href="/"
             className={style.navLink}
             active={activeLink === '/'}
           >
@@ -35,31 +35,31 @@ function NavbarComponent() {
           </Nav.Link>
 
           <Nav.Link
-              href="/Trending"
-              className={style.navLink}
-              active={activeLink === '/Trending'}
-            >
-              <i className="bi bi-graph-up"></i>
-            </Nav.Link>
+            href="/Trending"
+            className={style.navLink}
+            active={activeLink === '/Trending'}
+          >
+            <i className="bi bi-graph-up"></i>
+          </Nav.Link>
 
-          <Nav.Link 
-            href="/Saved" 
+          <Nav.Link
+            href="/Saved"
             className={style.navLink}
             active={activeLink === '/Saved'}
           >
             <i className="bi bi-bookmark"></i>
           </Nav.Link>
 
-          <Nav.Link 
-            href="/Games" 
+          <Nav.Link
+            href="/Games"
             className={style.navLink}
             active={activeLink === '/Games'}
           >
             <i className="bi bi-controller"></i>
           </Nav.Link>
 
-          <Nav.Link 
-            href="/Polls" 
+          <Nav.Link
+            href="/Polls"
             className={style.navLink}
             active={activeLink === '/Polls'}
           >

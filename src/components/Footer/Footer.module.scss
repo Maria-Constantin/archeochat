@@ -45,6 +45,7 @@
   .socialIcons {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     max-width: 150px;
 
     .socialIcon {
